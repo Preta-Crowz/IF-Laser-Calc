@@ -9,7 +9,7 @@ function initLens() {
 }
 
 function updateBiomeSelector() {
-  BIOME = "";
+  BIOME = $("#biome").val();
   var B = createBiomeList();
   for (var s of $("#biome option")) s.remove();
   $("#biome").append(`<option value='' selected></option>`);
@@ -57,4 +57,8 @@ $(document).ready(() => {
   });
 
   for (var L of $(".lens")) $(L).change(calculate);
+
+  curr = $("#dataset").val();
+  BIOME = $("#biome").val();
+  DEPTH = parseInt($("#depth").val());
 });

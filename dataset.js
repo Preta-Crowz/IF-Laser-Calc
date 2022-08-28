@@ -17,10 +17,9 @@ const LENS_TYPE = {
   RED: 14,
   BLACK: 15
 };
-let DEPTH = 64;
-let BIOME = "";
+let DEPTH;
+let BIOME;
 let LENS_WEIGHT = 5;
-let LENS = [-1, -1, -1, -1, -1, -1];
 
 function dataRefiner(J) {
   for (var O in J) {

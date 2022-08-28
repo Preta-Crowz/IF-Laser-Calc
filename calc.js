@@ -1,4 +1,4 @@
-let curr = "DEFAULT";
+let curr;
 
 function createBiomeList() {
   var B = [];
