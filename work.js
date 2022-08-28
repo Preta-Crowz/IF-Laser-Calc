@@ -34,17 +34,20 @@ function calculate() {
     if (R.weight <= 0) continue;
     res.append(`<tr><td>${R.item}</td><td>${R.weight}</td><td>${R.weight / sum * 100}%</td></tr>`)
   }
-  console.log("Calculated!");
 }
 
 $(document).ready(() => {
+  curr = $("#dataset").val();
+  BIOME = $("#biome").val();
+  DEPTH = parseInt($("#depth").val());
+
   initLens();
+  updateBiomeSelector();
 
   $("#dataset").change(() => {
     curr = $("#dataset").val();
     updateBiomeSelector();
   });
-  updateBiomeSelector();
 
   $("#biome").change(() => {
     BIOME = $("#biome").val();
@@ -57,8 +60,4 @@ $(document).ready(() => {
   });
 
   for (var L of $(".lens")) $(L).change(calculate);
-
-  curr = $("#dataset").val();
-  BIOME = $("#biome").val();
-  DEPTH = parseInt($("#depth").val());
 });
