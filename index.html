@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <title>Laser Drill Calculator</title>
+    <link href="./style.css" rel="stylesheet">
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Base scripts -->
+    <script src="./dataset.js"></script>
+    <!-- Load ore data -->
+    <script src="./data/default.js"></script>
+    <script src="./data/dj2.js"></script>
+    <!-- Finalize -->
+    <script src="./calc.js"></script>
+    <script src="./work.js"></script>
+  </head>
+  <body>
+    <label for="dataset">Dataset :</label>
+    <select name="dataset" id="dataset">
+      <option value="DEFAULT">Default</option>
+      <option value="DJ2" selected>Divine Journey 2</option>
+    </select>
+    <label for="depth">Laser depth :</label>
+    <input id="depth" type="number" min="0" max="256" value="64" step="0">
+    <br />
+    <label for="biome">Select biome :</label>
+    <select name="biome" id="biome">
+    </select>
+    <br />
+    <label for="lens">Lens :</label>
+    <table id="lens" cellspacing="0">
+      <tbody>
+        <tr>
+          <td>
+            <select class="lens" id="lens0"></select>
+            <input type="checkbox" class="lens" id="invert0">Inv.</td>
+          </td>
+          <td>
+            <select class="lens" id="lens1"></select>
+            <input type="checkbox" class="lens" id="invert1">Inv.</td>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <select class="lens" id="lens2"></select>
+            <input type="checkbox" class="lens" id="invert2">Inv.</td>
+          </td>
+          <td>
+            <select class="lens" id="lens3"></select>
+            <input type="checkbox" class="lens" id="invert3">Inv.</td>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <select class="lens" id="lens4"></select>
+            <input type="checkbox" class="lens" id="invert4">Inv.</td>
+          </td>
+          <td>
+            <select class="lens" id="lens5"></select>
+            <input type="checkbox" class="lens" id="invert5">Inv.</td>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <label for="result">Result :</label>
+    <table id="result" cellspacing="0">
+      <thead>
+        <tr>
+          <td>Item</td>
+          <td>Weight</td>
+          <td>Chance</td>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </body>
+</html>

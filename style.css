@@ -1,0 +1,17 @@
+td {
+    border: 1px solid #333;
+    padding: 5px;
+}
+
+#dataset {
+    width: 160px;
+}
+#depth {
+    width: 50px;
+}
+#biome {
+    width: 300px;
+}
+select.lens {
+    width: 120px;
+}
