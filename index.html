@@ -19,9 +19,12 @@
     <select name="dataset" id="dataset">
       <option value="DEFAULT">Default</option>
       <option value="DJ2" selected>Divine Journey 2</option>
+      <option value="CUSTOM">Custom</option>
     </select>
     <label for="depth">Laser depth :</label>
     <input id="depth" type="number" min="0" max="256" value="64" step="0">
+    <br />
+    <textarea id="custom" type="text" placeholder="Paste your config file here" rows="10" cols="80">[{"item":"Raw catium","color":6,"rarity":[{"whitelist":"","blacklist":"minecraft:hell, minecraft:sky","depth_min":22,"depth_max":222,"weight":22}]},{"item":"Nullium","color":15,"rarity":[{"whitelist":"","blacklist":"minecraft:hell, minecraft:sky","depth_min":0,"depth_max":255,"weight":1}]}]</textarea>
     <br />
     <label for="biome">Select biome :</label>
     <select name="biome" id="biome">

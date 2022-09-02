@@ -40,6 +40,8 @@ $(document).ready(() => {
   curr = $("#dataset").val();
   BIOME = $("#biome").val();
   DEPTH = parseInt($("#depth").val());
+  ORE_DATA.CUSTOM = JSON.parse($("#custom").val());
+  ORE_DATA.CUSTOM = dataRefiner(ORE_DATA.CUSTOM);
 
   initLens();
   updateBiomeSelector();
@@ -57,6 +59,19 @@ $(document).ready(() => {
   $("#depth").change(() => {
     DEPTH = parseInt($("#depth").val());
     calculate();
+  });
+
+  $("#custom").change(() => {
+    try {
+      ORE_DATA.CUSTOM = JSON.parse($("#custom").val());
+      ORE_DATA.CUSTOM = dataRefiner(ORE_DATA.CUSTOM);
+    } catch {
+      ORE_DATA.CUSTOM = [];
+    }
+    if (curr === "CUSTOM") {
+      updateBiomeSelector();
+      calculate();
+    }
   });
 
   for (var L of $(".lens")) $(L).change(calculate);
